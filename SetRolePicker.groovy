@@ -34,11 +34,14 @@ public class SetRolePicker extends FieldBehaviours {
 
 
 
-		def selectionbox = customFieldManager.getCustomFieldObjectByName("SelectCriteria")
-		def selectionvalue = getCustomFieldValue("SelectCriteria")
+		//def selectionbox = customFieldManager.getCustomFieldObjectByName("SelectCriteria")
+		//def selectionvalue = getCustomFieldValue(selectionbox)
 
+		def selectionbox = getFieldByName("SelectCriteria")
+		def selectionvalue = selectionbox.getValue()
+		
 
-		log.info ("${issue}: selectionbox-->${selectionvalue} ")
+		log.info ("selectionbox-->${selectionvalue} ")
 
 
 		//def group = groupManager.getGroup("jira-developers")
